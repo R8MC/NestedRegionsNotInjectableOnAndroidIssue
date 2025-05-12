@@ -8,9 +8,9 @@
              MinimumHeightRequest="500">
 
     <VerticalStackLayout>
-        <Button Command="{Binding StartIssueCommand}"/>
+        <Button Text="Start issue" Command="{Binding StartIssueCommand}"/>
         <ContentView MinimumHeightRequest="400" BackgroundColor="Aqua" 
-                     x:Name="A_h" prism:RegionManager.RegionName="{x:Static nestedRegionsNotInjectableOnAndroidIssue:RegionNames.FirstLevelRegion}" />
+                      prism:RegionManager.RegionName="{x:Static nestedRegionsNotInjectableOnAndroidIssue:RegionNames.FirstLevelRegion}" />
     </VerticalStackLayout>
 
 </ContentPage>

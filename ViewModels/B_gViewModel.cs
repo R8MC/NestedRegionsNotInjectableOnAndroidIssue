@@ -1,6 +1,8 @@
-﻿namespace NestedRegionsNotInjectableOnAndroidIssue.ViewModels;
+﻿using NestedRegionsNotInjectableOnAndroidIssue.Views;
 
-public partial class B_gViewModel : BindableBase, INavigatedAware
+namespace NestedRegionsNotInjectableOnAndroidIssue.ViewModels;
+
+public partial class B_gViewModel : BindableBase, INavigationAware
 {
     private readonly IRegionManager _regionManager;
     private readonly INavigationService _navigationService;
@@ -9,8 +11,9 @@ public partial class B_gViewModel : BindableBase, INavigatedAware
     {
         _regionManager = regionManager;
         _navigationService = navigationService;
+        
     }
-
+    
     public void OnNavigatedFrom(INavigationParameters parameters)
     {
         
@@ -18,6 +21,6 @@ public partial class B_gViewModel : BindableBase, INavigatedAware
 
     public void OnNavigatedTo(INavigationParameters parameters)
     {
-        
+        _regionManager.RequestNavigate(RegionNames.SecondLevelRegion, nameof(C_g));
     }
 }
