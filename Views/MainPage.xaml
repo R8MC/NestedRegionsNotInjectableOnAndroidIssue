@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="NestedRegionsNotInjectableOnAndroidIssue.Views.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="Automatic"
+             xmlns:nestedRegionsNotInjectableOnAndroidIssue="clr-namespace:NestedRegionsNotInjectableOnAndroidIssue"
+             MinimumHeightRequest="500">
+
+    <VerticalStackLayout>
+        <Button Command="{Binding StartIssueCommand}"/>
+        <ContentView MinimumHeightRequest="400" BackgroundColor="Aqua" 
+                     x:Name="A_h" prism:RegionManager.RegionName="{x:Static nestedRegionsNotInjectableOnAndroidIssue:RegionNames.FirstLevelRegion}" />
+    </VerticalStackLayout>
+
+</ContentPage>
