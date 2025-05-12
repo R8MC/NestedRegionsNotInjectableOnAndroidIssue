@@ -17,7 +17,12 @@ public class MainPageViewModel : BindableBase, INavigatedAware
 
     private void OnStartIssue()
     {
-        _regionManager.RequestNavigate(RegionNames.FirstLevelRegion, nameof(B_g));
+        _regionManager.RequestNavigate(RegionNames.FirstLevelRegion, nameof(B_g), NavigationCallback);
+    }
+
+    private void NavigationCallback(NavigationResult obj)
+    {
+        
     }
 
     public void OnNavigatedFrom(INavigationParameters parameters)

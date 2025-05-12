@@ -17,7 +17,7 @@ public partial class C_gViewModel : BindableBase, INavigatedAware
     }
 
     public void OnNavigatedTo(INavigationParameters parameters)
-    {
+    {xampl
         
     }
 }
